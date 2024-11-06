@@ -1,0 +1,57 @@
+<h1>Solo un h1{{nombre}}</h1>
+
+<h2>Primero</h2>
+<h2 class="{{visibility ? 'visible': 'invisible'}}">segundo</h2>
+<h2 class="{{cambioColor ? 'blue': 'red'}}">tercero</h2>
+<button type="button" (click)="toggleColor()">Cambiar</button>
+<button type="button" (click)="toggleVisibility()">Cambiar2</button>
+<header>
+
+
+  Aqui el logo
+  <br>
+  Menu (Tenemos el bocadillo - lista - del menu)
+</header>
+
+<br>
+ <div *ngIf="elementos.length>0">
+   <p *ngFor="let elemento of elementos">
+     {{elemento}}
+   </p>
+ </div>
+<br>
+<div *ngIf="elementos2.length>0"><!-- *ngIf= -->
+  <p *ngFor="let elemento of elementos2, let i =index "><!-- *ngFor= -->
+    <span>{{elemento.id}}</span>
+    <span>{{elemento.nombre}}</span>, index:
+    <span>{{i}}</span>
+
+  </p>
+</div>
+
+
+
+
+
+<footer>
+  Aqui el contenido legal / informacion no relevante
+  <br>
+  Elemento:copyright y quien diseno la app
+</footer>
+
+<br>
+
+<p>
+  <span style="font-weight: bold">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Asperiores eius, magnam modi officia quod sapiente! Assumenda beatae corporis eius eligendi facilis, harum illo necessitatibus omnis perferendis perspiciatis praesentium unde vel.
+
+</p>
+<br>
+<main>
+  <section>1</section>
+  <section>2</section>
+  <section>3</section>
+  <section>4</section>
+
+
+</main>
+
