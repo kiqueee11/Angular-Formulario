@@ -2,13 +2,23 @@
 <div class="pokemon" *ngIf="pokemon.length > 0">
     <div *ngFor="let pokemons of pokemon">
 
-        
         <p>{{pokemons.id}}.{{pokemons.nombre}}</p>
         <img src={{pokemons.image_url}} width="100px" height="100px" >
         <p>{{pokemons.descripcion}}</p>
+        <button type="button" (click)="toggleModal(pokemons)">ver informacion</button>
+    </div>
 
 
 
+
+
+</div>
+
+<div class="pokemon" *ngIf="pokemon.length > 0">
+    <div *ngFor="let pokemons of pokemonsApi">
+
+        <p>{{pokemons.name}}</p>
+        <button type="button" (click)="detallesPokemon(pokemons.name)">ver informacion</button>"
 
     </div>
 
@@ -17,3 +27,4 @@
 
 
 </div>
+<app-modal *ngIf="mostrarModal"></app-modal>

@@ -6,3 +6,10 @@ export interface Pokemon {
 
 
 }
+
+export interface PokemonApi{
+
+    name : string;
+    url : string;
+
+}

@@ -4,6 +4,16 @@ text-align: center;
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 15px;
+div{
 
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #262626;
 
+  }
+
+button{
+  display: block;
+  margin: 0 auto;
+
+  }
 }

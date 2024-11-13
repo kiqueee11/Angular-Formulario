@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +9,10 @@ import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
+import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     VistaComponent,
     FormComponent,
     HomeComponent,
-    InfoComponent
+    InfoComponent,
+    ModalComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(
+
+      withInterceptorsFromDi()
+
+      )
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
