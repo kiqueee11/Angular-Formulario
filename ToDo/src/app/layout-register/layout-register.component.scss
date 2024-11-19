@@ -1,0 +1,88 @@
+.contenedor {
+  background-color: darkred;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  color: white;
+
+  .logo {
+    position: relative;
+    background-color: red;
+    margin: 15px 15px 0 15px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 4px rgba(250, 0, 0, 0.5);
+
+    h2 {
+
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      font-family: 'Dancing Script', cursive;
+
+    }
+
+  }
+  .texto {
+    position: relative;
+    background-color: red;
+    margin: 50px 25px 0;
+    border-radius: 5%;
+    box-shadow: 2px 2px 4px rgba(250, 0, 0, 0.5);
+
+    h2 {
+
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 50px;
+      font-size: 60px;
+      font-family: 'Dancing Script', cursive;
+
+
+    }
+
+
+  }
+
+  .campos {
+
+    text-align: center;
+    margin-top: 50px;
+
+
+    .input {
+
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 5px;
+      border-color: red;
+      border-style: solid;
+      border-width: 3px;
+
+    }
+
+    .boton {
+
+      padding: 10px;
+      margin: 20px;
+      border-radius: 10px;
+      border-color: red;
+      border-style: solid;
+      border-width: 3px;
+      background-color: white;
+
+
+    }
+
+  }
+
+}
