@@ -1,16 +1,21 @@
-<header class="w-100 position-sticky top-0 py-3 px-3 bg-primary row m-auto align-items-center">
-    <div class="col-9">
-        <span class="text-white">Logo aqui</span>
-    </div>
-    <nav class=" bg-dark "[class.active]="showNav">
-        <a class="text-white d-block text-decoration-none">Inicio</a>
-        <a class="text-white d-block text-decoration-none">Lista de tareas</a>
-        <a class="text-white d-block text-decoration-none">Contacto</a>
+<header class="w-100 position-sticky top-0 py-3 px-3 bg-primary row m-auto align-items-center z-1">
+
+        <div class="col-8">
+
+            <h2 style="color: white">ToDoList</h2>
+
+        </div>
+
+
+    <nav class=" bg-primary " [class.active]="showNav">
+        <a class="navs text-white d-block text-decoration-none" href="http://localhost:4200">Inicio</a>
+
+        <a class="navs text-white d-block text-decoration-none" href="https://github.com/kiqueee11">Contacto</a>
         <button type="button" class="btn btn-light"(click)="toggleNav()"><i class="bi bi-x-lg"></i></button>
     </nav>
     <div class="col-3">
-        <button type="button" class="btn btn-light" (click)="toggleNav()">
-            <i class="bi bi-list"></i>
+        <button type="button" class="btn btn-close-white" (click)="toggleNav()">
+            <i class="bi bi-list"style="color: white;"></i>
         </button>
 
     </div>

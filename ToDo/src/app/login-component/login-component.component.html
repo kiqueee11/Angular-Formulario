@@ -4,10 +4,18 @@
     </div>
 
     <div class="campos">
-        <input class="input" type="text" placeholder="Usuario"><br>
-        <input class="input" type="text" placeholder="Contraseña"><br>
-        <button type="button" class="boton"  (click)="cambiar()" >Iniciar Sesión</button><br>
+        <form method="post" [formGroup]="formulario" (submit)="cambiar()">
+
+        <label for="name-usuario"></label>
+        <input formControlName="name" id="name-usuario" class="input" type="text" placeholder="Usuario"><br>
+
+        <label for="name-contraseña"></label>
+        <input formControlName="password" id="name-contraseña" class="input" type="password" placeholder="Contraseña"><br>
+
+        <button type="submit" class="boton" >Iniciar Sesión</button><br>
         <a href="http://localhost:4200//registro">¿Todavía no te has regristrado?</a>
+
+        </form>
     </div>
 
 

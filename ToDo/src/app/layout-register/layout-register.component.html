@@ -6,10 +6,21 @@
         <h2>Registro</h2>
     </div>
     <div class="campos">
-        <input class="input" type="text" placeholder="Usuario"><br>
-        <input class="input" type="text" placeholder="Contraseña"><br>
-        <input class="input" type="text" placeholder="Confirmar Contraseña"><br>
-        <input class="input" type="text" placeholder="Correo"><br>
-        <button type="button" class="boton" (click)="cambiar()" >Registro</button>
+        <form method="post" [formGroup]="formulario"  (submit)="cambiar()">
+        <label for="name-usuario"></label>
+        <input formControlName="name" id="name-usuario" class="input" type="text" placeholder="Usuario"><br>
+
+        <label for="name-pass"></label>
+        <input formControlName="password" id="name-pass" class="input" type="text" placeholder="Contraseña"><br>
+
+        <label for="name-pass2"></label>
+        <input formControlName="pass2" id="name-pass2" class="input" type="text" placeholder="Confirmar Contraseña"><br>
+
+        <label for="name-mail"></label>
+        <input formControlName="mail" id="name-mail" class="input" type="text" placeholder="Mail"><br>
+
+            <button type="submit" class="boton">Registro</button>
+        </form>
 </div>
+
 </div>

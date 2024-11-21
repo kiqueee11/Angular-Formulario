@@ -1,0 +1,61 @@
+.contenedor {
+  background-color: darkred;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  color: white;
+  height: 100%;
+  overflow: auto;
+
+  .listas{
+    overflow-y: auto;
+    height: 90%;
+    padding: 30px;
+    margin: 150px 30px 0 20px;
+    background-color: red;
+    border-radius: 5px;
+
+    li{
+
+
+      border-bottom: 1px solid white;
+      padding: 10px;
+
+
+    }
+
+  }
+
+  .botones{
+
+    border: 1px solid white;
+    background-color: red;
+    bottom: 0;
+
+    width: 100%;
+    position: sticky;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    .boton{
+
+
+
+      width: 40%;
+      border: 3px solid white;
+      border-radius: 5px;
+      background-color: red;
+      color: white;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+
+
+    }
+
+  }
+}

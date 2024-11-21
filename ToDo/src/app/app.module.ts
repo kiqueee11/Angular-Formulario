@@ -11,6 +11,7 @@ import { LayoutConHeaderComponent } from './layout-con-header/layout-con-header.
 import { LayoutSinHeaderComponent } from './layout-sin-header/layout-sin-header.component';
 import { LayoutRegisterComponent } from './layout-register/layout-register.component';
 import { MainComponent } from './main/main.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,11 +24,13 @@ import { MainComponent } from './main/main.component';
     LayoutRegisterComponent,
     MainComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

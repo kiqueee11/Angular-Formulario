@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+     showText: boolean = false;
+
+
+  toggleText(): void {
+    this.showText=!this.showText;
+    alert(this.showText);
+  }
+
 }
