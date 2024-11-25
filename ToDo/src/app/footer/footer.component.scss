@@ -1,0 +1,26 @@
+div{
+  left: 0;
+  right: 0;
+  align-items: center;
+  .botones{
+
+    border: 1px solid white;
+    background-color: red;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+
+
+    .boton{
+
+      border: 3px solid white;
+      border-radius: 5px;
+      background-color: red;
+      color: white;
+
+    }
+
+  }
+}

@@ -1,0 +1,9 @@
+
+<div class="container d-flex align-items-center w-100 justify-content-around ">
+<form [formGroup]="formulario">
+
+    <input formControlName="actividad" name="actividad" type="text" placeholder="Actividad"/><br><br>
+    <textarea formControlName="descripcion" name="descripcion" placeholder="Descripcion"></textarea><br><br>
+    <button class="btn btn-success" (click)="crear()"> crear</button>
+</form>
+</div>

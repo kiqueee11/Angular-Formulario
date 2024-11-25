@@ -12,6 +12,7 @@ import { LayoutSinHeaderComponent } from './layout-sin-header/layout-sin-header.
 import { LayoutRegisterComponent } from './layout-register/layout-register.component';
 import { MainComponent } from './main/main.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AgregarComponent } from './agregar/agregar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     LayoutConHeaderComponent,
     LayoutSinHeaderComponent,
     LayoutRegisterComponent,
-    MainComponent
+    MainComponent,
+    AgregarComponent
   ],
     imports: [
         BrowserModule,

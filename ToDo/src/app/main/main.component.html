@@ -2,37 +2,14 @@
 
 <div class="contenedor">
 
-    <ul class="listas">
+    <ul class="listas" *ngFor="let lista of listas">
 
-        <li><input type="text" > hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-        <li>hola <input type="checkbox"></li>
-
-
-
-
+       <li>{{lista.actividad}}, {{lista.descripcion}}</li>
 
 
     </ul>
-    <div class="botones">
-        <button class="boton col-3" type="button" (click)="toggleText()">editar</button>
-        <button class="boton col-3" type="button">+</button>
-        <button class="boton col-3" type="button">-</button>
 
-    </div>
 
 </div>
 
+<app-footer></app-footer>

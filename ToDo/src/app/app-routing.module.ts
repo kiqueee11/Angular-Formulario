@@ -6,6 +6,7 @@ import {LayoutConHeaderComponent} from "./layout-con-header/layout-con-header.co
 import {LayoutRegisterComponent} from "./layout-register/layout-register.component";
 import {main} from "@popperjs/core";
 import {MainComponent} from "./main/main.component";
+import {AgregarComponent} from "./agregar/agregar.component";
 
 const routes: Routes = [
   {path: "", component:LayoutSinHeaderComponent,
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "", component:LayoutConHeaderComponent,
   children: [
       {path: "main", component:MainComponent},
+      {path: "agregar", component:AgregarComponent}
 ]} ,
     {path : "**", component:LoginComponentComponent}
 ];

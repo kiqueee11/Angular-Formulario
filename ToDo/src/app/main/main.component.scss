@@ -18,11 +18,15 @@
     background-color: red;
     border-radius: 5px;
 
-    li{
+    .texto{
+      display: none;
 
+      &.active{
+        display: block;
+        border-bottom: 1px solid white;
+        padding: 10px;
+      }
 
-      border-bottom: 1px solid white;
-      padding: 10px;
 
 
     }
