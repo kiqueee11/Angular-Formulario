@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {PopupService} from '../services/utils/popup.service';
+import {RegisterService} from '../services/auth/register.service';
+
 
 @Component({
   selector: 'app-registro',
@@ -14,7 +16,8 @@ export class RegistroComponent implements OnInit {
   formulario: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-              private popupService: PopupService
+              private popupService: PopupService,
+              private registerService: RegisterService,
   ) {
     this.formulario = this.formBuilder.group({
       username: ['', Validators.required],
@@ -23,6 +26,7 @@ export class RegistroComponent implements OnInit {
 
     })
   }
+
   ngOnInit(): void {
 
     for (let i = 0; i < 100; i++) {
@@ -30,15 +34,20 @@ export class RegistroComponent implements OnInit {
     }
 
   }
+
   enviar(): void {
-    if(this.formulario.invalid) {
+    if (this.formulario.valid) {
 
-      this.popupService.showMessage("error", "invalido","El formulario es invalido");
-
-    }else{
-      this.popupService.showMessage("success", "valido","El formulario es valido")
-
+      this.registerService.check().subscribe({
+        next: response => {
+          this.popupService.showMessage("success", "Registro correcto", response.message,)
+        },
+        error: error => {
+          console.log(error);
+        }
+      })
     }
-  }
 
+
+  }
 }
