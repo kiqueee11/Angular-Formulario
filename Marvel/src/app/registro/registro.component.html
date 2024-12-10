@@ -1,0 +1,43 @@
+<div class="w-100 position-relative container-login">
+
+  <div class="content w-100 h-100 position-relative bg-dark">
+  <form [formGroup]="formulario" (submit)="enviar()" class="position-relative bg-white m-auto py-4 px-3 shadow-sm rounded-3">
+
+    <div class="border-bottom border-light-subtle pb-3 mb-3" >
+
+      <label for="Usuario">Usuario</label><br>
+      <input formControlName="username" class="form-control" name="password" type="text" id="Usuario" placeholder="username">
+
+    </div>
+    <div class="mb-3">
+
+      <label for="Password">Password</label><br>
+      <input formControlName="password" class="form-control" name="password" type="text" id="Password" placeholder="password">
+
+    </div>
+    <div class="mb-3">
+      <label for="Edad">Edad</label><br>
+      <select id="Edad" class="form-control">
+        <option *ngFor="let n of numeros">{{n}}</option>
+        <option>100+</option>
+      </select>
+
+    </div>
+    <div class="mb-3">
+
+      <label for="Correo">Correo</label><br>
+      <input formControlName="correo" class="form-control" name="correo" type="text" id="Correo" placeholder="correo">
+
+    </div>
+    <div class="border-top border-light-subtle pt-3">
+
+      <button type="submit" class="btn btn-outline-dark w-100">Regristrame</button>
+
+    </div>
+
+
+  </form>
+
+</div>
+
+</div>

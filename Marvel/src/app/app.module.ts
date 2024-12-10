@@ -8,13 +8,18 @@ import { LoginComponent } from './login/login.component';
 import { PanelControlComponent } from './panel-control/panel-control.component';
 import { LayoutConHeaderComponent } from './layout-con-header/layout-con-header.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PanelControlComponent,
-    LayoutConHeaderComponent
+    LayoutConHeaderComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(
+      withInterceptorsFromDi()
+    )
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
